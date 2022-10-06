@@ -17,7 +17,7 @@ lastUpdated: true
 
 > https://apihut.net/ip/:output/:ip
 
-## 请求参数
+## 路径参数
 
 | 参数     | 必填  | 说明                  |
 |--------|-----|---------------------|
@@ -26,19 +26,19 @@ lastUpdated: true
 
 ## 响应结果
 
-| 名称         | 类型     | 说明        |
-|------------|--------|-----------|
-| code       | int    | 状态码       |
-| msg        | string | 状态信息      |
-| data       | object | IP定位结果    |
-| - ip       | string | 用于定位的IP   |
-| - country  | string | 国家        |
-| - province | string | 省份        |
-| - city     | string | 市         |
-| - district | string | 区         |
-| - isp      | string | 运营商       |
-| - location | string | 定位坐标(经纬度) |
-| - source   | string | 数据源       |
+| 名称         | 类型     | 说明             |
+|------------|--------|----------------|
+| code       | int    | 状态码            |
+| msg        | string | 状态信息           |
+| data       | object | IP定位结果         |
+| - ip       | string | 用于定位的IP        |
+| - country  | string | 国家             |
+| - province | string | 省份             |
+| - city     | string | 市              |
+| - district | string | 区              |
+| - isp      | string | 运营商            |
+| - location | string | 定位坐标(经纬度)      |
+| - source   | string | 数据源 [列表](#数据源) |
 
 ### 数据源
 
