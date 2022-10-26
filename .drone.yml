@@ -1,0 +1,37 @@
+kind: pipeline
+type: kubernetes
+name: build
+
+steps:
+  - name: "[main] docker build & push"
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: harbor.northes.co/apihut/docs
+      tags: latest
+      registry: harbor.northes.co
+    when:
+      branch:
+        - main
+
+  - name: "[dev] docker build & push"
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: harbor.northes.co/apihut/docs
+      tags: dev
+      registry: harbor.northes.co
+    when:
+      branch:
+        - dev
+
+trigger:
+  branch:
+    - main
+    - dev
