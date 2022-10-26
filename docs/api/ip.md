@@ -17,37 +17,35 @@ lastUpdated: true
 
 > https://apihut.co/ip/:output/:ip
 
-## 请求参数
+## 路径参数
 
-| 参数     | 必填  | 说明                |
-|--------|-----|-------------------|
-| ip     | 否   | IP地址，缺省时会使用请求端的IP |
-| output | 否   | 指定[返回格式](#返回格式)   |
+### :ip
 
-### 返回格式
+IP地址，非必填，缺省时会使用请求端的IP
+
+
+### :output
 
 | 参数   | 值        |
 |------|----------|
 | json | Json格式返回 |
 | text | 纯文本格式返回  |
 
-
-
 ## 响应结果
 
-| 名称         | 类型     | 说明        |
-|------------|--------|-----------|
-| code       | int    | 状态码       |
-| msg        | string | 状态信息      |
-| data       | object | IP定位结果    |
-| - ip       | string | 用于定位的IP   |
-| - country  | string | 国家        |
-| - province | string | 省份        |
-| - city     | string | 市         |
-| - district | string | 区         |
-| - isp      | string | 运营商       |
-| - location | string | 定位坐标(经纬度) |
-| - source   | string | 数据源       |
+| 名称         | 类型     | 说明             |
+|------------|--------|----------------|
+| code       | int    | 状态码            |
+| msg        | string | 状态信息           |
+| data       | object | IP定位结果         |
+| - ip       | string | 用于定位的IP        |
+| - country  | string | 国家             |
+| - province | string | 省份             |
+| - city     | string | 市              |
+| - district | string | 区              |
+| - isp      | string | 运营商            |
+| - location | string | 定位坐标(经纬度)      |
+| - source   | string | 数据源 [列表](#数据源) |
 
 ### 数据源
 
@@ -56,11 +54,11 @@ lastUpdated: true
 | 高德  | gaode   |
 | 腾讯  | tencent |
 
-## 返回示例
+## 示例
 
 ### 返回请求来源IP的JSON定位信息
 
-`https://apihut.co/ip`
+`GET` https://apihut.co/ip
 
 ```json
 {
@@ -81,7 +79,7 @@ lastUpdated: true
 
 ### 返回指定IP的JSON定位信息
 
-`https://apihut.co/ip/111.206.145.41`
+`GET` https://apihut.co/ip/111.206.145.41
 
 ```json
 {
@@ -102,7 +100,7 @@ lastUpdated: true
 
 ### 返回IP纯文本
 
-`https://apihut.co/ip/text`
+`GET` https://apihut.co/ip/text
 
 ```
 111.206.145.41
