@@ -28,9 +28,11 @@ export default {
             {
                 text:'接口',
                 items:[
-                    {text:'IP定位',link:'/api/ip'},
+                    {text:'IP 定位',link:'/api/ip'},
                     {text:'哈希头像',link:'/api/avatar'},
                     {text:'协议测试',link:'/api/protocol'},
+                    {text: '一句问候',link: '/api/greet'},
+                    {text: '天气状况',link: '/api/weather'}
                 ]
             },
             {
