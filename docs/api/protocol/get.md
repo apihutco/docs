@@ -1,5 +1,7 @@
 # GET
 
+测试 GET 请求
+
 ## 请求地址
 > https://apihut.co/get
 

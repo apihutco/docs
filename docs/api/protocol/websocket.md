@@ -1,5 +1,7 @@
 # WebSocket
 
+测试 WebSocket 请求，支持单机与广播
+
 ## 请求地址
 `WSS`
 
