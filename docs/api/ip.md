@@ -11,11 +11,11 @@ lastUpdated: true
 
 `HTTPS` `GET`
 
-> https://apihut.net/ip
+> https://apihut.co/ip
 
-> https://apihut.net/ip/:ip
+> https://apihut.co/ip/:ip
 
-> https://apihut.net/ip/:output/:ip
+> https://apihut.co/ip/:output/:ip
 
 ## 请求参数
 
@@ -60,7 +60,7 @@ lastUpdated: true
 
 ### 返回请求来源IP的JSON定位信息
 
-`https://apihut.net/ip`
+`https://apihut.co/ip`
 
 ```json
 {
@@ -81,7 +81,7 @@ lastUpdated: true
 
 ### 返回指定IP的JSON定位信息
 
-`https://apihut.net/ip/111.206.145.41`
+`https://apihut.co/ip/111.206.145.41`
 
 ```json
 {
@@ -102,7 +102,7 @@ lastUpdated: true
 
 ### 返回IP纯文本
 
-`https://apihut.net/ip/text`
+`https://apihut.co/ip/text`
 
 ```
 111.206.145.41
