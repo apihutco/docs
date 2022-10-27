@@ -3,21 +3,15 @@ type: kubernetes
 name: build
 
 steps:
-  - name: "[main] docker build & push"
-    image: plugins/docker
-    settings:
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
-      repo: harbor.northes.co/apihut/docs
-      tags: latest
-      registry: harbor.northes.co
-    when:
-      branch:
-        - main
+  - name: yarn build
+    image: node:16.17-alpine
+    commands:
+      - apk add git
+      - yarn config list
+      - yarn install --network-timeout 600000
+      - yarn run docs:build
 
-  - name: "[dev] docker build & push"
+  - name: docker build tag & push
     image: plugins/docker
     settings:
       username:
@@ -25,11 +19,25 @@ steps:
       password:
         from_secret: docker_password
       repo: harbor.northes.co/apihut/docs
-      tags: dev
+      tags: ${DRONE_TAG##v}
       registry: harbor.northes.co
     when:
-      branch:
-        - dev
+      event:
+        - tag
+
+  - name: docker build hash & push
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: harbor.northes.co/apihut/docs
+      tags: ${DRONE_COMMIT_SHA:0:8}
+      registry: harbor.northes.co
+      when:
+        branch:
+          - dev
 
 trigger:
   branch:
