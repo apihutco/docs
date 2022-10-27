@@ -4,8 +4,8 @@ WORKDIR /site
 
 COPY . .
 
-RUN npm install yarn && yarn && yarn run docs:build
+RUN yarn && yarn run docs:build
 
-FROM nginx
+FROM nginx:alpine
 
-COPY --from=builder /site/docs/.vitepress/dist /usr/share/nginx/html
+COPY --from=builder /site/docs/.vitepress/dist /usr/share/nginx/html/
