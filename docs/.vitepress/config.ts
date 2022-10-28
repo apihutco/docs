@@ -20,9 +20,11 @@ export default {
         },
         sidebar: [
             {
-                text: '全局',
+                text: '指引',
                 items: [
-                    {text: '状态码', link: '/code'},
+                    {text: '状态码', link: '/guide/code'},
+                    {text:'更新日志',link: '/guide/changelog'},
+                    {text:'从v1迁移',link:'/guide/migration'}
                 ]
             },
             {
@@ -53,6 +55,14 @@ export default {
         footer: {
             message: 'Released under the MIT License.',
             copyright: 'Copyright © 2019-present Evan You'
-        }
+        },
+        nav:[
+            {
+                text:'2.0',
+                items:[
+                    {text:'1.0',link:'https://v1.docs.apihut.net'}
+                ]
+            }
+        ]
     }
 }
