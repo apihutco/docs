@@ -11,18 +11,25 @@ lastUpdated: true
 
 `HTTPS` `GET`
 
-> https://apihut.net/ip
+> https://apihut.co/ip
 
-> https://apihut.net/ip/:ip
+> https://apihut.co/ip/:ip
 
-> https://apihut.net/ip/:output/:ip
+> https://apihut.co/ip/:output/:ip
 
 ## 路径参数
 
-| 参数     | 必填  | 说明                  |
-|--------|-----|---------------------|
-| ip     | 否   | IP地址，缺省时会使用请求端的IP   |
-| output | 否   | 指定返回格式，支持 json,text |
+### :ip
+
+IP地址，非必填，缺省时会使用请求端的IP
+
+
+### :output
+
+| 参数   | 值        |
+|------|----------|
+| json | Json格式返回 |
+| text | 纯文本格式返回  |
 
 ## 响应结果
 
@@ -47,11 +54,11 @@ lastUpdated: true
 | 高德  | gaode   |
 | 腾讯  | tencent |
 
-## 返回示例
+## 示例
 
 ### 返回请求来源IP的JSON定位信息
 
-`https://apihut.net/ip`
+`GET` https://apihut.co/ip
 
 ```json
 {
@@ -72,7 +79,7 @@ lastUpdated: true
 
 ### 返回指定IP的JSON定位信息
 
-`https://apihut.net/ip/111.206.145.41`
+`GET` https://apihut.co/ip/111.206.145.41
 
 ```json
 {
@@ -91,9 +98,9 @@ lastUpdated: true
 }
 ```
 
-### 返回纯文本
+### 返回IP纯文本
 
-`https://apihut.net/ip/text`
+`GET` https://apihut.co/ip/text
 
 ```
 111.206.145.41

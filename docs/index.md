@@ -1,9 +1,14 @@
 ---
 
 ---
-![](./static/logo.png)
+![logo](./static/logo.png)
 
 ## 前言
+
+<p>
+<a href="https://drone.northes.co/apihut/server"><img src="https://drone.northes.co/api/badges/apihut/server/status.svg?ref=refs/heads/main" alt="Server" style="display: inline"></a>
+<a href="https://drone.northes.co/apihut/docs"><img src="https://drone.northes.co/api/badges/apihut/docs/status.svg?ref=refs/heads/main" alt="Docs" style="display: inline"></a>
+</p>
 
 这是一个由个人维护的接口中心，本意是为自己的作品提供统一的接口服务，由于服务器资源尚有空闲，有限度开放公用
 
@@ -17,7 +22,7 @@
 
 `HTTPS` `RESTful`
 
-[https://apihut.net/](https://apihut.net/)
+[https://apihut.co/](https://apihut.co/)
 
 ## Todo
 

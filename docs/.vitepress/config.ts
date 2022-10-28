@@ -3,22 +3,22 @@
 export default {
     lang: 'zh-CN',
     title: 'APIHut',
-    description:'APIHut 文档.',
+    description: 'APIHut 文档.',
     lastUpdated: true,
     cleanUrls: 'without-subfolders',
 
-    head:[
-        ['meta', { name: 'theme-color', content: '#646cff' }]
+    head: [
+        ['meta', {name: 'theme-color', content: '#646cff'}]
     ],
 
-    themeConfig:{
+    themeConfig: {
         outlineTitle: '大纲',
         lastUpdatedText: '最后更新于',
         docFooter: {
             prev: '上一页',
             next: '下一页'
         },
-        sidebar:[
+        sidebar: [
             {
                 text: '全局',
                 items: [
@@ -26,18 +26,26 @@ export default {
                 ]
             },
             {
-                text:'接口',
-                items:[
-                    {text:'IP定位',link:'/api/ip'},
-                    {text:'哈希头像',link:'/api/avatar'},
-                    {text:'协议测试',link:'/api/protocol'},
-                ]
+                text: '接口',
+                items: [
+                    {text: 'IP 定位', link: '/api/ip'},
+                    {text: '哈希头像', link: '/api/avatar'},
+                    {
+                        text: '协议测试', items: [
+                            {text: 'GET', link: '/api/protocol/get'},
+                            {text: 'POST', link: '/api/protocol/post'},
+                            {text: 'WebSocket', link: '/api/protocol/websocket'},
+                        ]
+                    },
+                    {text: '一句问候', link: '/api/greet'},
+                    {text: '天气状况', link: '/api/weather'}
+                    ,]
             },
             {
-                text:'关于',
-                items:[
-                    {text:'常见问题',link:'/about/faq'},
-                    {text:'联系我们',link:'/about/contact'},
+                text: '关于',
+                items: [
+                    {text: '常见问题', link: '/about/faq'},
+                    {text: '联系我们', link: '/about/contact'},
                 ]
             },
 

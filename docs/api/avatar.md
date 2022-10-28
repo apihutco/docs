@@ -7,7 +7,7 @@
 ## 请求地址
 `HTTPS` `GET`
 
-> https://apihut.net/avatar
+> https://apihut.co/avatar
 
 
 
@@ -28,7 +28,7 @@
 
 ## 返回示例
 
-![哈希头像](https://apihut.net/avatar?random=1&bgcolor=transparent)
+![哈希头像](https://apihut.co/avatar?random=1&bgcolor=transparent&size=128)
 
 
 
@@ -37,12 +37,12 @@
 HTML
 
 ```html
-<img src="https://apihut.net/avatar?random=1&bgcolor=transparent" alt="哈希头像">
+<img src="https://apihut.co/avatar?random=1&bgcolor=transparent" alt="哈希头像">
 ```
 
 Markdown
 
 ```markdown
-![哈希头像](https://apihut.net/avatar?random=1&bgcolor=transparent)
+![哈希头像](https://apihut.co/avatar?random=1&bgcolor=transparent)
 ```
 
