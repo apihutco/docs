@@ -3,9 +3,12 @@
 测试 GET 请求
 
 ## 请求地址
-> https://apihut.co/get
 
-> https://apihut.co/get/:output
+`HTTPS` `GET`
+
+> [https://apihut.co/get](https://apihut.co/get)
+
+> [https://apihut.co/get/:output](https://apihut.co/get/:output)
 
 ## 路径参数
 

@@ -3,11 +3,12 @@
 测试 WebSocket 请求，支持单机与广播
 
 ## 请求地址
+
 `WSS`
 
-> wss://apihut.co/ws
+> [wss://apihut.co/ws](wss://apihut.co/ws)
 
-> wss://apihut.co/ws/:channel
+> [wss://apihut.co/ws/:channel](wss://apihut.co/ws/:channel)
 
 ## 路径参数
 ### :channel
