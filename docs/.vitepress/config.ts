@@ -12,6 +12,9 @@ export default {
     ],
 
     themeConfig: {
+        socialLinks:[
+            {icon:'github',link:'https://github.com/apihutco'}
+        ],
         outlineTitle: '大纲',
         lastUpdatedText: '最后更新于',
         docFooter: {
