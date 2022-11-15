@@ -23,7 +23,7 @@
 
 `HTTPS` `RESTful`
 
-[https://apihut.co/](https://apihut.co/)
+[https://apihut.co](https://apihut.co)
 
 ## Todo
 
@@ -31,13 +31,12 @@
 - ✔ 协议测试
 - ⬜ 实时天气、天气预报
 - ⬜ 随机Emoji
-- ⬜ 一句问候
+- ✔ 一句问候
 - ⬜ 极限用词检测（广告、暴恐、新闻违禁词、美妆违禁词）
 - ✔ 哈希头像
 - ⬜ GitHub徽章
 - ⬜ 二维码生成、解析
 - ⬜ 中文分词
-- ⬜ 随机密码
 - ⬜ 热榜（百度、微博、知乎、澎湃、B站、IT之家）
 - ⬜ 【Bilibili】av、bv号互转
 - ⬜ 【Bilibili】视频信息查询
