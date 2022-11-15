@@ -2,7 +2,6 @@
 lastUpdated: true
 ---
 
-
 # IP定位
 
 支持IPV4和IPV6两种地址，支持部分国外国家和地区的IP解析
@@ -23,7 +22,6 @@ lastUpdated: true
 
 IP地址，非必填，缺省时会使用请求端的IP
 
-
 ### :output
 
 | 参数   | 值        |
@@ -33,19 +31,16 @@ IP地址，非必填，缺省时会使用请求端的IP
 
 ## 响应结果
 
-| 名称         | 类型     | 说明             |
-|------------|--------|----------------|
-| code       | int    | 状态码            |
-| msg        | string | 状态信息           |
-| data       | object | IP定位结果         |
-| - ip       | string | 用于定位的IP        |
-| - country  | string | 国家             |
-| - province | string | 省份             |
-| - city     | string | 市              |
-| - district | string | 区              |
-| - isp      | string | 运营商            |
-| - location | string | 定位坐标(经纬度)      |
-| - source   | string | 数据源 [列表](#数据源) |
+| 名称       | 类型     | 说明             |
+|----------|--------|----------------|
+| ip       | string | 用于定位的IP        |
+| country  | string | 国家             |
+| province | string | 省份             |
+| city     | string | 市              |
+| district | string | 区              |
+| isp      | string | 运营商            |
+| location | string | 定位坐标(经纬度)      |
+| source   | string | 数据源 [列表](#数据源) |
 
 ### 数据源
 

@@ -40,7 +40,7 @@
 
 
 
-## 返回示例
+## 示例
 
 ![哈希头像](https://apihut.co/avatar?random=1&bgcolor=transparent&size=128)
 
