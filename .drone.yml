@@ -11,7 +11,7 @@ steps:
       - yarn install --network-timeout 600000
       - yarn run docs:build
 
-  - name: docker build hash & push
+  - name: docker build & push
     image: plugins/docker
     settings:
       username:
@@ -40,7 +40,7 @@ steps:
       - yarn install --network-timeout 600000
       - yarn run docs:build
 
-  - name: docker build tag & push
+  - name: docker build & push
     image: plugins/docker
     settings:
       username:
