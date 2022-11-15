@@ -5,13 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: harbor.northes.co/apihut/docs
+  repository: northes/apihut-docs
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 imagePullSecrets:
-  - name: "harbor-pull-secret"
+  - name: "hub-pull-secret"
 nameOverride: ""
 fullnameOverride: ""
 
