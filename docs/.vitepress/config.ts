@@ -5,7 +5,7 @@ export default defineConfig({
     lang: 'zh-CN',
     title: 'APIHut',
     description: 'APIHut 文档.',
-    cleanUrls: 'without-subfolders',
+    cleanUrls: true,
     head: [
         ['meta', { name: 'theme-color', content: '#646cff' }]
     ],
