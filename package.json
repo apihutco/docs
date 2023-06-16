@@ -9,6 +9,7 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "sitemap": "^7.1.1",
     "vitepress": "^1.0.0-alpha.19",
     "vue": "^3.2.40"
   }
