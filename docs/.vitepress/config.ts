@@ -1,9 +1,9 @@
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
-import { defineConfig, PageData } from 'vitepress'
+import { defineConfig } from 'vitepress'
 
-const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
+const links: any[] = []
 
 export default defineConfig({
     lastUpdated: true,
@@ -73,23 +73,24 @@ export default defineConfig({
             }
         ]
     },
-    /* 站点地图 */
     transformHtml: (_, id, { pageData }) => {
         if (!/[\\/]404\.html$/.test(id))
-            links.push({
-                url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-                lastmod: pageData.lastUpdated
-            })
-    },
+          links.push({
+            // you might need to change this if not using clean urls mode
+            url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+            lastmod: pageData.lastUpdated
+          })
+      },
     buildEnd: async ({ outDir }) => {
-        // hostname 为线上域名
-        const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
+        const sitemap = new SitemapStream({
+            hostname: 'https://docs.apihut.co/'
+        })
         const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
         sitemap.pipe(writeStream)
         links.forEach((link) => sitemap.write(link))
         sitemap.end()
         await new Promise((r) => writeStream.on('finish', r))
-    }
+    },
 })
 
 // export default {
