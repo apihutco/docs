@@ -1,4 +1,9 @@
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import { SitemapStream } from 'sitemap'
 import { defineConfig } from 'vitepress'
+
+const links: any[] = []
 
 export default defineConfig({
     lastUpdated: true,
@@ -57,7 +62,7 @@ export default defineConfig({
         ],
         footer: {
             message: 'Released under the MIT License.',
-            copyright: 'Copyright © 2019-present Evan You'
+            copyright: 'Copyright © 2023 Northes'
         },
         nav: [
             {
@@ -67,7 +72,25 @@ export default defineConfig({
                 ]
             }
         ]
-    }
+    },
+    transformHtml: (_, id, { pageData }) => {
+        if (!/[\\/]404\.html$/.test(id))
+          links.push({
+            // you might need to change this if not using clean urls mode
+            url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+            lastmod: pageData.lastUpdated
+          })
+      },
+    buildEnd: async ({ outDir }) => {
+        const sitemap = new SitemapStream({
+            hostname: 'https://docs.apihut.co/'
+        })
+        const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+        sitemap.pipe(writeStream)
+        links.forEach((link) => sitemap.write(link))
+        sitemap.end()
+        await new Promise((r) => writeStream.on('finish', r))
+    },
 })
 
 // export default {

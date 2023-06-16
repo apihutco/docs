@@ -40,19 +40,19 @@ apihut
 wss://apihut.co/ws/test
 
 client1
-```text
+```
 # send
 hello,I'm client1
 ```
 
 client2
-```text
+```
 # receive
 hello,I‘m client1
 ```
 
 client3
-```text
+```
 # receive
 hello,I‘m client1
 ```

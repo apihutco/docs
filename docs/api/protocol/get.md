@@ -51,7 +51,7 @@ https://apihut.co?name=apihut&greet=hello
 
 https://apihut.co?name=apihut&greet=hello&output=text
 
-```text
+```
 name:apihut greet:hello
 ```
 
