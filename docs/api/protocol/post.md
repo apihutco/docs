@@ -6,30 +6,30 @@
 
 `HTTPS` `POST`
 
-> [https://apihut.co/post](https://apihut.co/post)
+> [https://apihut.co](https://apihut.co)
 
 
 ## 路径参数
 无
 
 ## 响应结果
+
 按请求body原样返回
 
 ## 示例
-`POST` https://apihut.co/post
+
+`POST` 
+
+https://apihut.co
 ### Request
 ```json
 {
-    "hello":"apihut"
+    "name":"apihut"
 }
 ```
 ### Response
 ```json
 {
-    "code": 2000,
-    "msg": "成功",
-    "data": {
-        "hello": "apihut"
-    }
+    "name":"apihut"
 }
 ```

@@ -27,7 +27,7 @@ export default {
                 items: [
                     {text: '状态码', link: '/guide/code'},
                     {text:'更新日志',link: '/guide/changelog'},
-                    {text:'从v1迁移',link:'/guide/migration'}
+                    // {text:'从v1迁移',link:'/guide/migration'}
                 ]
             },
             {
@@ -42,8 +42,10 @@ export default {
                             {text: 'WebSocket', link: '/api/protocol/websocket'},
                         ]
                     },
-                    {text: '一句问候', link: '/api/greet'},
-                    {text: '天气状况', link: '/api/weather'}
+                    // {text: '一句问候', link: '/api/greet'},
+                    { text: '天气状况(实时)', link: '/api/weather_now' },
+                    { text: '天气预报(3日)', link: '/api/weather_3day' },
+                    { text: '地理位置信息', link: '/api/geo' }
                     ,]
             },
             {

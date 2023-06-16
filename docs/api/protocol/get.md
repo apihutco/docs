@@ -2,23 +2,25 @@
 
 测试 GET 请求
 
+未传参时将返回默认首页
+
 ## 请求地址
 
 `HTTPS` `GET`
 
-> [https://apihut.co/get](https://apihut.co/get)
+> [https://apihut.co/](https://apihut.co/)
 
-> [https://apihut.co/get/:output](https://apihut.co/get/:output)
+## 请求参数
+### output
 
-## 路径参数
+指定返回格式
 
-### :output
-返回格式
+| 值   | 说明               |
+| ---- | ------------------ |
+| json | JSON格式返回，默认 |
+| text | 纯文本格式返回     |
 
-| 参数   | 值        |
-|------|----------|
-| json | Json格式返回 |
-| text | 纯文本格式返回  |
+> output字段将在相应结果中被移除
 
 ## 响应结果
 
@@ -26,44 +28,45 @@
 
 > **相同参数处理规则**
 > 
-> 对于采用相同Key的参数，会将其合并到同一个Key下，并以数组的形式返回 [示例](###示例)
+> 对于采用相同Key的参数，会将其合并到同一个Key下，并以数组的形式返回 [示例](#示例) 
 
 ## 示例
 
 ### JSON格式返回
-`GET` https://apihut.co/get?hello=apihut&name=northes
+
+`GET` 
+
+https://apihut.co?name=apihut&greet=hello
 
 ```json
 {
-    "code": 2000,
-    "msg": "成功",
-    "data": {
-        "hello": "apihut",
-        "name": "northes"
-    }
+    "name": "apihut",
+    "greet": "hello"
 }
 ```
 
 ### 纯文本格式返回
-`GET` https://apihut.co/get/text
+
+`GET` 
+
+https://apihut.co?name=apihut&greet=hello&output=text
 
 ```text
-hello:apihut name:northes 
+name:apihut greet:hello
 ```
 
 ### 存在相同Key
-`GET` https://apihut.co/get?key=first&key=second
+
+`GET` 
+
+https://apihut.co?key=first&key=second
 
 ```json
 {
-    "code": 2000,
-    "msg": "成功",
-    "data": {
-        "key": [
-            "first",
-            "second"
-        ]
-    }
+    "key": [
+        "first",
+        "second"
+    ]
 }
 ```
 
