@@ -9,6 +9,9 @@
 <img src="https://img.shields.io/badge/version-2.x-brightgreen?style=flat" alt="Server" style="display: inline">
 &nbsp;
 <img src="https://img.shields.io/badge/powered_by-kubernetes-blue?style=flat&logo=kubernetes&logoColor=white&logoWidth=13" alt="Docs" style="display: inline">
+&nbsp;
+<a href="https://status.apihut.co" target="_blank">
+<img alt="Static Badge" src="https://img.shields.io/badge/status-page-green" style="display: inline"></a>
 </p>
 
 这是一个由个人维护的接口中心，本意是为自己的作品提供统一的接口服务，由于服务器资源尚有空闲，有限度开放公用
