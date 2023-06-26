@@ -26,4 +26,4 @@ npm run docs:build
 
 ## License
 
-APIHut 基于 [MIT License](https://github.com/apihutco/docs/blob/main/LICENSE) 开源。
+[MIT License](https://github.com/apihutco/docs/blob/main/LICENSE)
