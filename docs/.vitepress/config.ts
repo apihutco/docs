@@ -61,7 +61,7 @@ export default defineConfig({
             {
                 text: '旗下',
                 items: [
-                    { text: '状态页', link: 'https://drop.apihut.co' },
+                    { text: '互传', link: 'https://drop.apihut.co' },
                 ]
             },
         ],
