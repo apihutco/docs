@@ -58,7 +58,12 @@ export default defineConfig({
                     { text: '状态页', link: 'https://status.apihut.co' },
                 ]
             },
-
+            {
+                text: '旗下',
+                items: [
+                    { text: '状态页', link: 'https://drop.apihut.co' },
+                ]
+            },
         ],
         footer: {
             message: 'Released under the MIT License.',
