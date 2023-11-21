@@ -6,12 +6,18 @@
 ## 前言
 
 <p>
-<img src="https://img.shields.io/badge/version-2.x-brightgreen?style=flat" alt="Server" style="display: inline">
+<img src="https://img.shields.io/badge/release-v2.0-brightgreen?style=flat" style="display: inline">
 &nbsp;
-<img src="https://img.shields.io/badge/powered_by-kubernetes-blue?style=flat&logo=kubernetes&logoColor=white&logoWidth=13" alt="Docs" style="display: inline">
+<img src="https://img.shields.io/badge/powered_by-kubernetes-blue?style=flat&logo=kubernetes&logoColor=white&logoWidth=13" style="display: inline">
+&nbsp;
+<a href="https://github.com/apihutco/server" target="_blank">
+<img src="https://img.shields.io/github/go-mod/go-version/apihutco/server?style=flat&logo=go" style="display: inline">
+</a>
+&nbsp;
+<img src="https://vercelbadge.vercel.app/api/northes/apihut-docs?style=flat" style="display: inline">
 &nbsp;
 <a href="https://status.apihut.co" target="_blank">
-<img alt="Static Badge" src="https://img.shields.io/badge/status-page-green" style="display: inline"></a>
+<img alt="Static Badge" src="https://img.shields.io/badge/status-up-green" style="display: inline"></a>
 </p>
 
 这是一个由个人维护的接口中心，本意是为自己的作品提供统一的接口服务，由于服务器资源尚有空闲，有限度开放公用
